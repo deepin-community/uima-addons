@@ -1,0 +1,58 @@
+From: Markus Koschany <apo@debian.org>
+Date: Fri, 27 Oct 2017 20:25:41 +0200
+Subject: java9
+
+Compile for Java 8 or later to avoid a FTBFS with Java 9. The default value was
+1.4.
+
+Bug-Debian: https://bugs.debian.org/874007
+Forwarded: no
+---
+ DictionaryAnnotator/pom.xml        | 1 +
+ RegularExpressionAnnotator/pom.xml | 1 +
+ SimpleServer/pom.xml               | 3 ++-
+ 3 files changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/DictionaryAnnotator/pom.xml b/DictionaryAnnotator/pom.xml
+index 58be0c3..9e79bee 100644
+--- a/DictionaryAnnotator/pom.xml
++++ b/DictionaryAnnotator/pom.xml
+@@ -146,6 +146,7 @@
+             <goals><goal>xmlbeans</goal></goals>
+             <configuration>
+               <schemaDirectory>resources</schemaDirectory>
++              <javaSource>1.8</javaSource>
+             </configuration>        
+           </execution>
+         </executions>
+diff --git a/RegularExpressionAnnotator/pom.xml b/RegularExpressionAnnotator/pom.xml
+index abc15e0..73c5571 100644
+--- a/RegularExpressionAnnotator/pom.xml
++++ b/RegularExpressionAnnotator/pom.xml
+@@ -154,6 +154,7 @@
+             <goals><goal>xmlbeans</goal></goals>
+             <configuration>
+               <schemaDirectory>resources</schemaDirectory>
++              <javaSource>1.8</javaSource>
+             </configuration>        
+           </execution>
+         </executions>
+diff --git a/SimpleServer/pom.xml b/SimpleServer/pom.xml
+index 030203b..23ef830 100644
+--- a/SimpleServer/pom.xml
++++ b/SimpleServer/pom.xml
+@@ -166,6 +166,7 @@
+             <goals><goal>xmlbeans</goal></goals>
+             <configuration>
+               <schemaDirectory>src/main/resources</schemaDirectory>
++              <javaSource>1.8</javaSource>
+             </configuration>        
+           </execution>
+         </executions>
+@@ -173,4 +174,4 @@
+ 
+ 	  </plugins>
+ 	</build>
+-</project>
+\ No newline at end of file
++</project>

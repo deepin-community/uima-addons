@@ -1,0 +1,8 @@
+/usr/share/java/uima-ConceptMapper.jar               /usr/share/uima/lib/uima-ConceptMapper.jar
+/usr/share/java/uima-DictionaryAnnotator.jar         /usr/share/uima/lib/uima-DictionaryAnnotator.jar
+/usr/share/java/uima-FsVariables.jar                 /usr/share/uima/lib/uima-FsVariables.jar
+/usr/share/java/uima-RegularExpressionAnnotator.jar  /usr/share/uima/lib/uima-RegularExpressionAnnotator.jar
+/usr/share/java/uima-SimpleServer.jar                /usr/share/uima/lib/uima-SimpleServer.jar
+/usr/share/java/uima-SnowballAnnotator.jar           /usr/share/uima/lib/uima-SnowballAnnotator.jar
+/usr/share/java/uima-Tagger.jar                      /usr/share/uima/lib/uima-Tagger.jar
+/usr/share/java/uima-WhitespaceTokenizer.jar         /usr/share/uima/lib/uima-WhitespaceTokenizer.jar

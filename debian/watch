@@ -1,0 +1,4 @@
+version=3
+opts="uversionmangle=s/-(alpha|beta)-/~$1/" \
+  http://www.apache.org/dist/uima/ \
+  uima-addons-(.*)-source-release.zip debian debian/orig-tar.sh

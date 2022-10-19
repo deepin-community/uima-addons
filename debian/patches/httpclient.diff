@@ -1,0 +1,23 @@
+Index: b/SimpleServer/src/main/java/org/apache/uima/simpleserver/util/HttpClientUtils.java
+===================================================================
+--- a/SimpleServer/src/main/java/org/apache/uima/simpleserver/util/HttpClientUtils.java
++++ b/SimpleServer/src/main/java/org/apache/uima/simpleserver/util/HttpClientUtils.java
+@@ -44,13 +44,13 @@
+     url = new URL("http", host, port, file);
+     method = new HttpGet(url.toString());
+     HttpResponse response = null;
+-    try {
++    //try {
+     response = httpClient.execute(method);
+-    } catch (InterruptedException e) {
++    //} catch (InterruptedException e) {
+       // If we get here, something's seriously wrong
+-      e.printStackTrace();
+-      return null;
+-    }
++      //e.printStackTrace();
++      //return null;
++    //}
+     return response;
+   }
+ 

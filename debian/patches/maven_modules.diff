@@ -1,0 +1,40 @@
+Index: b/pom.xml
+===================================================================
+--- a/pom.xml
++++ b/pom.xml
+@@ -60,21 +60,21 @@
+ 
+   <modules>
+     <module>uima-addons-parent</module>
+-    <module>AlchemyAPIAnnotator</module>
+-    <module>BSFAnnotator</module>
++    <!--    <module>AlchemyAPIAnnotator</module> -->
++    <!--    <module>BSFAnnotator</module> -->
+     <module>ConceptMapper</module>
+-    <module>ConfigurableFeatureExtractor</module>
++    <!--    <module>ConfigurableFeatureExtractor</module> -->
+     <module>DictionaryAnnotator</module>
+     <module>FsVariables</module>
+-    <module>Lucas</module>
+-    <module>OpenCalaisAnnotator</module>
++    <!--    <module>Lucas</module> -->
++    <!--    <module>OpenCalaisAnnotator</module> -->
+     <module>PearPackagingAntTask</module>
+     <module>RegularExpressionAnnotator</module>
+     <module>SimpleServer</module>
+     <module>SnowballAnnotator</module>
+-    <module>Solrcas</module>
++    <!--    <module>Solrcas</module> -->
+     <module>Tagger</module>
+-    <module>TikaAnnotator</module>
++    <!--    <module>TikaAnnotator</module> -->
+     <module>WhitespaceTokenizer</module>
+   </modules>
+ 
+@@ -159,4 +159,4 @@
+     </profile>
+   </profiles>
+   
+-</project>
+\ No newline at end of file
++</project>

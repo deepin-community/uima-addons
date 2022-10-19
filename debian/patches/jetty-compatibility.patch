@@ -1,0 +1,54 @@
+Description: Port the Jetty 6 code to Jetty 9
+Author: Emmanuel Bourg <ebourg@apache.org>
+Forwarded: no
+--- a/SimpleServer/src/main/java/org/apache/uima/simpleserver/util/JettyUtils.java
++++ b/SimpleServer/src/main/java/org/apache/uima/simpleserver/util/JettyUtils.java
+@@ -28,11 +28,11 @@
+ import javax.servlet.Servlet;
+ 
+ import org.apache.uima.simpleserver.servlet.SimpleServerServlet;
+-import org.mortbay.jetty.Connector;
+-import org.mortbay.jetty.Server;
+-import org.mortbay.jetty.nio.SelectChannelConnector;
+-import org.mortbay.jetty.servlet.ServletHandler;
+-import org.mortbay.jetty.servlet.ServletHolder;
++import org.eclipse.jetty.server.Connector;
++import org.eclipse.jetty.server.Server;
++import org.eclipse.jetty.server.ServerConnector;
++import org.eclipse.jetty.servlet.ServletHandler;
++import org.eclipse.jetty.servlet.ServletHolder;
+ 
+ public class JettyUtils {
+ 
+@@ -103,7 +103,7 @@
+ 
+   public static Server createServer() {
+     Server server = new Server();
+-    Connector connector = new SelectChannelConnector();
++    ServerConnector connector = new ServerConnector(server);
+     final int port = findFreePort();
+     if (port <= 0) {
+       return null;
+@@ -120,7 +120,7 @@
+     return server;
+   }
+ 
+-  public static void addServletWithMapping(Server server, Class<?> servlet, String pathSpec) {
++  public static void addServletWithMapping(Server server, Class<? extends Servlet> servlet, String pathSpec) {
+     ((ServletHandler) server.getHandler()).addServletWithMapping(servlet, pathSpec);
+   }
+ 
+@@ -130,11 +130,11 @@
+   }
+ 
+   public static String getHost(Server server) {
+-    return server.getConnectors()[0].getHost();
++    return ((org.eclipse.jetty.server.NetworkConnector) server.getConnectors()[0]).getHost();
+   }
+ 
+   public static int getPort(Server server) {
+-    return server.getConnectors()[0].getPort();
++    return ((org.eclipse.jetty.server.NetworkConnector) server.getConnectors()[0]).getPort();
+   }
+ 
+   private static final int findFreePort() {

@@ -1,0 +1,51 @@
+Source: uima-addons
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders: Damien Raude-Morvan <drazzib@debian.org>
+Build-Depends: debhelper (>= 10), default-jdk, maven-debian-helper (>= 1.4.5)
+Build-Depends-Indep: ant,
+                     bsh,
+                     junit4,
+                     libbuild-helper-maven-plugin-java,
+                     libcommons-io-java,
+                     libcommons-logging-java,
+                     libhttpclient-java,
+                     libjavacc-maven-plugin-java,
+                     libjetty9-java,
+                     liblog4j1.2-java,
+                     libmaven-antrun-plugin-java,
+                     libmaven-bundle-plugin-java,
+                     libmaven-dependency-plugin-java,
+                     libmaven-install-plugin-java,
+                     librhino-java,
+                     libservlet3.1-java,
+                     libslf4j-java,
+                     libuima-core-java,
+                     libuima-tools-java,
+                     libxmlbeans-java,
+                     libxmlbeans-maven-plugin-java (>= 2.3.3-3)
+Standards-Version: 4.1.1
+Vcs-Git: https://anonscm.debian.org/git/pkg-java/uima-addons.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-java/uima-addons.git
+Homepage: http://uima.apache.org/sandbox.html
+
+Package: libuima-addons-java
+Architecture: all
+Depends: ${maven:Depends}, ${misc:Depends}
+Recommends: ${maven:OptionalDepends}
+Description: Apache UIMA Addons
+ Apache UIMA is an implementation of the OASIS-UIMA specifications.
+ .
+ OASIS UIMA Committee: <http://www.oasis-open.org/committees/uima/>.
+ .
+ Unstructured Information Management applications are software systems
+ that analyze large volumes of unstructured information in order to
+ discover knowledge that is relevant to an end user.
+ .
+ An example UIM application might ingest plain text and identify
+ entities, such as persons, places, organizations; or relations,
+ such as works-for or located-at.
+ .
+ UIMA Addons is a collection of Annotators extracted for sandbox for
+ official distribution. It also provide Simple Server and Pear packaging tools.
